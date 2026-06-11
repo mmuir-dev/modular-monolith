@@ -3,3 +3,10 @@
 
 GET {{RiverBooks.Web_HostAddress}}/books/
 Accept: application/json
+
+###
+
+GET {{RiverBooks.Web_HostAddress}}/api/books/
+Accept: application/json
+
+###
