@@ -21,9 +21,6 @@ app.UseHttpsRedirection();
 
 app.UseFastEndpoints();
 
-//Map module endpoints
-app.MapBookEndpoints();
-
 app.Run();
 
 

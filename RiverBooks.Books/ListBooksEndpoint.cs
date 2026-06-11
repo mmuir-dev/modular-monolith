@@ -1,23 +1,6 @@
 ﻿using FastEndpoints;
-using Microsoft.AspNetCore.Builder;
 
 namespace RiverBooks.Books;
-
-public static class  BookEndpoints
-{
-    public static void MapBookEndpoints(this WebApplication app)
-    {
-        app.MapGet("/books", (IBookService bookService) =>
-        {
-            return bookService.ListBooks();
-        });
-    }
-}
-
-public class ListBooksResponse
-{
-    public List<BookDto> Books { get; set; }
-}
 
 internal class ListBooksEndpoint(IBookService bookService) : EndpointWithoutRequest<ListBooksResponse>
 {
@@ -25,7 +8,7 @@ internal class ListBooksEndpoint(IBookService bookService) : EndpointWithoutRequ
 
     public override void Configure()
     {
-        Get("api/books");
+        Get("/books");
         AllowAnonymous();
     }
 
