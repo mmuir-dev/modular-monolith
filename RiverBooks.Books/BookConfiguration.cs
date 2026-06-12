@@ -28,6 +28,6 @@ internal class BookConfiguration : IEntityTypeConfiguration<Book>
     var tolkein = "J.R.R. Tolkien";
     yield return new Book(Book1Guid, "The Fellowship of the Ring", tolkein, 10.99m);
     yield return new Book(Book2Guid, "The Two Towers", tolkein, 11.99m);
-    yield return new Book(Book2Guid, "The Return of the King", tolkein, 12.99m);
+    yield return new Book(Book3Guid, "The Return of the King", tolkein, 12.99m);
   }
 }
