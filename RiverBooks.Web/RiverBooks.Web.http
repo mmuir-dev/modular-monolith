@@ -26,3 +26,12 @@ Content-Type: application/json
 DELETE {{RiverBooks.Web_HostAddress}}/books/{{DeleteBookId}}
 Accept: application/json
 ###
+
+@PriceyBookId = f509b93a-f2c8-4595-afd6-37b55f6188c3
+POST {{RiverBooks.Web_HostAddress}}/books/{{PriceyBookId}}/pricehistory
+Accept: application/json
+Content-Type: application/json
+{
+  "id": "{{PriceyBookId}}",
+  "newPrice": 50.99
+}

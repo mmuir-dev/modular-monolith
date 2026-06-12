@@ -1,7 +1,8 @@
 ﻿using FastEndpoints;
 
-namespace RiverBooks.Books;
-internal class ListBooksEndpoint(IBookService bookService) : EndpointWithoutRequest<ListBooksResponse>
+namespace RiverBooks.Books.BookEndpoints;
+
+internal class List(IBookService bookService) : EndpointWithoutRequest<ListBooksResponse>
 {
     private readonly IBookService _bookService = bookService;
 
